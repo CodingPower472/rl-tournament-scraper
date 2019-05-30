@@ -1,0 +1,46 @@
+
+{
+    "tournaments": [
+        {
+            "premier": true,
+            "lan": false,
+            "teams": [
+                {
+                    "name": "The Bricks",
+                    "id": "TBR",
+                    "players": ["kuxir97", "myztik", "speed"]
+                },
+                {
+                    "name": "Cloud9",
+`                   "id": "C9",
+                    "players": ["squishy", "torment", "gimmick"]
+                },
+                {
+                    "name": "NRG",
+                    "id": "NRG",
+                    "players": ["GarrettG", "JSTN", "Fireburner"]
+                }
+            ],
+            "matches": [
+                {
+                    "date": 1084912834092340,
+                    "teams": ["C9", "TBR"],
+                    "games": [
+                        {
+                            "C9": 0, 
+                            "TBR": 2
+                        },
+                        {
+                            "C9": 1,
+                            "TBR": 2
+                        },
+                        {
+                            "C9": 3,
+                            "TBR": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

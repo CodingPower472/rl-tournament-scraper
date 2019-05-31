@@ -2,12 +2,20 @@
 use chrono::{NaiveDate};
 use std::collections::HashMap;
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Hash)]
 pub struct Team {
     pub name : String,
     pub link : String,
     pub players : Vec<String>,
 }
+
+impl PartialEq for Team {
+    fn eq(&self, rhs : &Self) -> bool {
+        self.link == rhs.link
+    }
+}
+
+impl Eq for Team {}
 
 #[derive(Clone)]
 pub struct Game {
@@ -24,8 +32,13 @@ pub struct Match {
 #[derive(Clone)]
 pub struct Tournament {
     pub name : String,
-    pub premier : bool,
     pub lan : bool,
     pub teams : Vec<Team>,
     pub matches : Vec<Match>,
+}
+
+pub struct Event {
+    pub name : String,
+    pub premier : bool,
+    pub tournaments : Vec<Tournament>,
 }

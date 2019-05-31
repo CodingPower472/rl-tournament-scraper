@@ -2,25 +2,30 @@
 use chrono::{NaiveDate};
 use std::collections::HashMap;
 
+#[derive(Clone, Debug)]
 pub struct Team {
-    name : String,
-    link : String,
-    players : Vec<String>,
+    pub name : String,
+    pub link : String,
+    pub players : Vec<String>,
 }
 
+#[derive(Clone)]
 pub struct Game {
-    scores : HashMap<Team, u8>,
+    pub scores : HashMap<Team, u8>,
 }
 
+#[derive(Clone)]
 pub struct Match {
-    date : NaiveDate,
-    teams : Vec<Team>,
-    games : Vec<Game>,
+    pub date : NaiveDate,
+    pub teams : Vec<Team>,
+    pub games : Vec<Game>,
 }
 
+#[derive(Clone)]
 pub struct Tournament {
-    name : String,
-    premier : bool,
-    lan : bool,
-    teams : Vec<Team>,
+    pub name : String,
+    pub premier : bool,
+    pub lan : bool,
+    pub teams : Vec<Team>,
+    pub matches : Vec<Match>,
 }
